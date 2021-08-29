@@ -14,6 +14,6 @@ function* fetchUsers() {
 }
 
 export default function* rootSaga() {
-  yield takeLatest(fetchRobots, fetchUsers);
+  yield takeLatest(fetchRobots().type, fetchUsers);
   // yield all([sayHello(), fetchUsers()]);
 }

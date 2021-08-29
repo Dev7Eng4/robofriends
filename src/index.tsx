@@ -5,6 +5,7 @@ import App from "./containers/App/App";
 import { store } from "./app/store";
 import { Provider } from "react-redux";
 import * as serviceWorker from "./serviceWorker";
+import "tachyons";
 
 ReactDOM.render(
   <React.StrictMode>

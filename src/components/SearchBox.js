@@ -1,9 +1,10 @@
 import React from "react";
-import { useDispatch } from "react-redux";
-import { setSearchField } from "../actions/actionThunk";
+import { useAppDispatch } from "app/hooks";
+import { search } from "slices/searchRobot";
+// import { setSearchField } from "../actions/actionThunk";
 
 const SearchBox = () => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   return (
     <div className="pa2">
@@ -11,7 +12,7 @@ const SearchBox = () => {
         className="pa3 ba b--green bg-lightest-blue"
         type="search"
         placeholder="search robots"
-        onChange={(e) => dispatch(setSearchField(e.target.value))}
+        onChange={(e) => dispatch(search(e.target.value))}
       />
     </div>
   );
